@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:cache="http://www.springframework.org/schema/cache"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd  http://www.springframework.org/schema/cache 
+        http://www.springframework.org/schema/cache/spring-cache-3.2.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+<mvc:default-servlet-handler/>
+<mvc:annotation-driven/>
+<context:annotation-config></context:annotation-config>
+<context:component-scan base-package="com.home.controllers"></context:component-scan>
+</beans>
+
+<!-- 
+1. The WebApplicationContext is the web app container which is created by the dispatcher servlet when the dispatcher servlet found its servlet.xml file.
+2. The web application container object will be created automatically during the server startup & destroyed when we stop the server.
+3. Hence, we do not need to create WebApplicationContext manually
+4. Once WebApplicationContext is created, it will scan for @Controller or @Component in base-package and create objects 
+-->
