@@ -17,8 +17,15 @@
 
 <mvc:default-servlet-handler/>
 <mvc:annotation-driven/>
+
 <context:annotation-config></context:annotation-config>
-<context:component-scan base-package="com.home.controllers"></context:component-scan>
+<context:component-scan base-package="com.home.controllers, com.home.mycafe.controllers"></context:component-scan>
+
+<bean id="viewresolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/WEB-INF/view/"></property>
+<property name="suffix" value=".jsp"></property>
+</bean>
+
 </beans>
 
 <!-- 

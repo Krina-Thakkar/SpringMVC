@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class BroController {
 	
-	@ResponseBody
+//	@ResponseBody
 	@RequestMapping("/bat")
 	public String giveBat() {
-		return "ok...here's your bat";
+		return "cricketbat";
 	}
 }
