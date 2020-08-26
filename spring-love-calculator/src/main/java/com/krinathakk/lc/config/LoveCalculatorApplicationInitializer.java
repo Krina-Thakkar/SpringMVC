@@ -22,7 +22,7 @@ public class LoveCalculatorApplicationInitializer implements WebApplicationIniti
 		// register dispatcher servlet with servlet context
 		ServletRegistration.Dynamic mycustomdispatcher = servletContext.addServlet("myCustomDispatcherServlet", dispatcherservlet);
 		mycustomdispatcher.setLoadOnStartup(1);
-		mycustomdispatcher.addMapping("/mywebsite.com/*");
+		mycustomdispatcher.addMapping("/");
 		
 
 	}
