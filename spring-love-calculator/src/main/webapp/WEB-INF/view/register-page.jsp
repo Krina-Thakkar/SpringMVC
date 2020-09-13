@@ -44,6 +44,17 @@ Reading: <form:checkbox path="hobby" value="reading"/>
 Male <form:radiobutton path="gender" value="male"/>
 Female <form:radiobutton path="gender" value="female"/>
 </p>
+</div>
+
+<div align="center">
+<h3>Communication</h3>
+<label>Email</label>
+<form:input path="communicationDto.email"/>
+<label>Phone</label>
+<form:input path="communicationDto.phone"/>
+</div>
+ 
+<div align="center">
 <input type="submit" value="register"/>
 </div>
 </form:form>

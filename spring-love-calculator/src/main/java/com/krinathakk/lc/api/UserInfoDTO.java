@@ -10,6 +10,9 @@ public class UserInfoDTO {
 	// @Min(value=3,message="* yourname should have atleast three char")
 	@Size(min=3,max=15,message="* yourname should have atleast three char and max 15 char")
 	private String userName;
+	
+	@NotBlank(message=" * crush name can't be blank")
+	@Size(min=3,max=15,message="* crush name should have atleast three char and max 15 char")
 	private String crushName;
 	
 	@AssertTrue(message="You have to agree to use this app")

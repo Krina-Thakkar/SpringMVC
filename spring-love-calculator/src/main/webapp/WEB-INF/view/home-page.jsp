@@ -41,6 +41,7 @@ function validateUserName(){
 <p>
 <label for="cn">Crush Name:</label>
 <form:input type="text" id="cn" path="crushName"/>
+<form:errors path="crushName" cssClass="error"/>
 </p>
 <p>
 <form:checkbox path="termAndCondition" id="check"/>

@@ -10,7 +10,7 @@
 <body>
 <h1 align="center">Love Calculator</h1>
 </hr>
-<h1>Your registeration is Successful!!!</h1>
+<h1>Your registration is Successful!!!</h1>
 <h2>The details you entered are</h2>
 <p>Name is ${userRegisterDetails.name}</p>
 <p>UserName is ${userRegisterDetails.userName}</p>
@@ -21,5 +21,7 @@ Hobbies are
 ${temp}
 </c:forEach>
 <p>Gender is ${userRegisterDetails.gender}</p>
+<p>Email is ${userRegisterDetails.communicationDto.email}</p> 
+<p>Phone is ${userRegisterDetails.communicationDto.phone}</p> 
 </body>
 </html>

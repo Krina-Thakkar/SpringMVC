@@ -8,6 +8,8 @@ public class UserRegisterDetailsDTO {
 	private String country;
 	private String[] hobby;
 	private String gender;
+	private communicationDTO communicationDto;
+	
 	public String getName() {
 		return name;
 	}
@@ -43,6 +45,13 @@ public class UserRegisterDetailsDTO {
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+	
+	public communicationDTO getCommunicationDto() {
+		return communicationDto;
+	}
+	public void setCommunicationDto(communicationDTO communicationDto) {
+		this.communicationDto = communicationDto;
 	}
 	
 	@Override
