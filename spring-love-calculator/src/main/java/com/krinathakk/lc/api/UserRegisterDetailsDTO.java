@@ -1,5 +1,5 @@
 package com.krinathakk.lc.api;
-
+import com.krinathakk.lc.Validator.Age;
 public class UserRegisterDetailsDTO {
 	
 	private String name;
@@ -8,6 +8,11 @@ public class UserRegisterDetailsDTO {
 	private String country;
 	private String[] hobby;
 	private String gender;
+	
+	//@Age(lower=30,upper=75,message="should be between 30 and 75")
+	@Age
+	private Integer Age;
+
 	private communicationDTO communicationDto;
 	
 	public String getName() {
@@ -46,7 +51,12 @@ public class UserRegisterDetailsDTO {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	
+	public Integer getAge() {
+		return Age;
+	}
+	public void setAge(Integer age) {
+		Age = age;
+	} 
 	public communicationDTO getCommunicationDto() {
 		return communicationDto;
 	}

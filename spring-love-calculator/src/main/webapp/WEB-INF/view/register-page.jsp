@@ -3,10 +3,22 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<style type="text/css">
+.error{
+color:red;
+position: fixed;
+text-align: left;
+margin-left:30px;
+}
+
+</style>
 </head>
+
 <body>
 <h1 align="center">Please Register Here</h1>
 <hr/>
@@ -44,6 +56,10 @@ Reading: <form:checkbox path="hobby" value="reading"/>
 Male <form:radiobutton path="gender" value="male"/>
 Female <form:radiobutton path="gender" value="female"/>
 </p>
+
+<label>Age:</label>
+<form:input path="Age"/>
+<form:errors path="Age" cssClass="error"/>
 </div>
 
 <div align="center">

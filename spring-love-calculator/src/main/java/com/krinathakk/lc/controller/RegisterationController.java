@@ -1,6 +1,12 @@
 package com.krinathakk.lc.controller;
 
+import java.util.List;
+
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -27,9 +33,18 @@ public class RegisterationController {
  	}
  	
  	@RequestMapping("/process-registeration")
-	public String showResultpage(@ModelAttribute("userRegisterDetails") UserRegisterDetailsDTO userRegisterDetailsDTO ) {	
- 		System.out.println("inside process registeration page");
+	public String showResultpage(@Valid @ModelAttribute("userRegisterDetails") UserRegisterDetailsDTO userRegisterDetailsDTO,BindingResult result){	
  		
+ 		
+ 		if(result.hasErrors()) {
+ 			List<ObjectError> allErrors = result.getAllErrors();
+ 			for(ObjectError error:allErrors) {
+ 				System.out.println(error );
+ 			}
+ 			return "register-page";
+ 		}
+ 		
+ 		System.out.println("inside process registeration page");
  		// save dto object in database
  		
  		return "registeration-confirmationPage";
